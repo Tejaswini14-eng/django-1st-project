@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration</title>
+</head>
+<body>
+<table align="center" border="1">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <tr>
+            <th>First Name</th>
+            <td>{{ form.first_name }}</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>{{ form.last_name }}</td>
+        </tr>
+        <tr>
+            <th>Username</th>
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ form.email }}</td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>{{ form.password }}</td>
+        </tr>
+        <tr>
+            <th>Confirm Password</th>
+            <td>{{ form.confirmPassword }}</td>
+        </tr>
+        <tr>
+            <th align="center" colspan="2"><input type="submit" value="submit"></th>
+        </tr>
+    </form>
+    <h3 align="center" border="1"><a href="/login">Log In</a></h3>
+</table>
+</body>
+</html>

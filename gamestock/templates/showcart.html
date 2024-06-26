@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show cart</title>
+</head>
+<body>
+    <table align="center" border="1">
+        <tr>
+            <th>Product Name</th>
+            <th>Image</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Remove</th>
+        </tr>
+        {% for x in data %}
+
+        <tr>
+            <td>{{ x.products.prod_name}}</td>
+            <td><img src="{{ x.products.image.url }}" style="height: 250px; width: 250px;"></td>
+            <td>
+                <select onchange="location = this.value">
+                    <option value="">{{ x.quantity }}</option>
+                    <option value="cart/update/1/{{ x.id }}">1</option>
+                    <option value="cart/update/2/{{ x.id }}">2</option>
+                    <option value="cart/update/3/{{ x.id }}">3</option>
+                    <option value="cart/update/4/{{ x.id }}">4</option>
+                    <option value="cart/update/5/{{ x.id }}">5</option>
+                
+                </select>
+            </td>
+            <td>{{ x.price }}</td>
+            <td><a href="/removecart/{{ x.id }}">Remove</a></td>
+        </tr>
+
+
+        {% endfor %}
+
+        <tr>
+            <td>Total Price</td>
+            <td></td>
+            <td></td>
+            <td>{{ total_price }}</td>
+            <td><button><a href="/add_to_order">Buy Now</a></button></td>
+        </tr>
+    </table>
+</body>
+</html>

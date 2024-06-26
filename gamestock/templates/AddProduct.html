@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <table border="1" align="center">
+        <form action="" method="POST" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            {{ form.as_table }}
+
+            <tr>
+                <td align="center" colspan="2"><input type="submit" value="submit"></td>
+            </tr>
+        </form>
+    </table>
+    <h3 align="center"> {{ error }}</h3>
+</body>
+</html>

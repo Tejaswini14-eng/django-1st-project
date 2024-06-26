@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update User</title>
+</head>
+<body>
+    <h1 align="center"> UPDATE user</h1>
+
+    <table border="1" align="center">
+        <form action="" method="POST">
+
+            {% csrf_token %}
+
+            <tr>
+                <th>First Name</th>
+                <td>{{ form.first_name }}</td>
+            </tr>
+
+            <tr>
+                <th>last Name</th>
+                <td>{{ form.last_name }}</td>
+            </tr>
+
+            <tr>
+                <th>email</th>>
+                <td>{{ form.email }}</td>
+            </tr>
+
+            <tr>
+                <th>Username</th>
+                <td>{{ form.username }}</td>
+            </tr>
+
+            <tr>
+                <th>is staff</th>
+                <td>{{ form.is_staff }}</td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="submit"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>

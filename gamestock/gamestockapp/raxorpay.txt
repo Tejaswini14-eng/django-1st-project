@@ -1,0 +1,5 @@
+documentation of razorpay : instead search razorpay payment integration
+https://razorpay.com/docs/payments/server-integration/python/payment-gateway/build-integration/
+
+
+razorpay login = razorpay website

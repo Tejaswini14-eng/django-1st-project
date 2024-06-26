@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+</head>
+<body>
+    <h1 align="center">ALL USERS</h1>
+    <table border="1" align="center" style="width: 60%;">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>last login</th>
+            <th>Is staff </th>
+            <th>date of joined</th>
+            <th>update</th>
+            <th>Delete</th>
+        </tr>
+
+        {% for x in data %}
+
+        <tr>
+            <td>{{x.first_name}}</td>
+            <td>{{x.last_name}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.username}}</td>
+            <td>{{x.last_login}}</td>
+            <td>{{x.is_staff}}</td>
+            <td>{{x.date_joined}}</td>
+        
+            <td><a href="/users/view/update/{{ x.id }}">Update</a></td>
+            <td><a href="/users/delete/{{ x.id }}">Delete</a></td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</body>
+
+</html>
